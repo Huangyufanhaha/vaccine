@@ -36,7 +36,7 @@
      <div class="form_table">
          <a-table 
             :columns="columns" 
-            :data-source="data"
+            :data-source="mockdata"
             :loading="loading"
             :pagination = "false"
             bordered
@@ -179,7 +179,7 @@ export default defineComponent({
          
           function getTableData(){
             setTimeout(() => {
-              data:mockdata
+              // data:mockdata
             },3000)
           }
 
@@ -195,8 +195,8 @@ export default defineComponent({
           value: ref<string[]>([]),
           admin,
           size:ref('large'),
-          data:[],
-          // mockdata,
+          // data:[],
+          mockdata,
           columns,
           loading:false,
           getTableData,
